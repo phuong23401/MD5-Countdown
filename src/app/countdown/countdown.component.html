@@ -1,0 +1,16 @@
+<h1>Time countdown !</h1>
+<div>{{timer}}</div>
+<div>
+    <button (click)="start()">Start</button>
+    <button (click)="stop()">Stop</button>
+    <button (click)="reset()">Reset</button>
+</div>
+
+<div *ngIf="messages; then non else found"></div>
+<ng-template #non></ng-template>
+<ng-template #found>Click Start to countdown!</ng-template>
+
+
+<!-- <div *ngIf="messages; then non else found"></div>
+<ng-template #non>Content to render when condition is true.</ng-template>
+<ng-template #found>Content to render when condition is false.</ng-template> -->
